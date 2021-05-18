@@ -1,8 +1,3 @@
-# Elabore um banco de dados e implemente dados de um setor de logística de bebidas.
-# A tabela deve possuir os campos código, marca da bebida, tipo da bebida, data de validade,
-# indicação se é alcóolico ou não (boolenao) e o preço. Os dados devem ser preenchidos do teclado.
-# O seu código deve ter as operações de CRUD, tradicionais em BD
-
 import sqlite3
 
 def inserir(marca, tipo, datavalidade, alcoolico, preco ):
@@ -133,15 +128,15 @@ connection = sqlite3.connect("bebidas")
 tabela = connection.cursor()
 
 # Criando a tabela
-#tabela.execute("""CREATE TABLE logistica (
-#    codigo  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-#    marca TEXT NOT NULL,
-#    tipo TEXT NOT NULL,
-#    datavalidade DATE,
-#    alcoolico BOOL,
-#    preco REAL
-#    );
-#    """)
+tabela.execute("""CREATE TABLE logistica (
+    codigo  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    marca TEXT NOT NULL,
+    tipo TEXT NOT NULL,
+    datavalidade DATE,
+    alcoolico BOOL,
+    preco REAL
+    );
+    """)
 
 # Menu
 op=int(1)
